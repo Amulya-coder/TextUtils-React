@@ -23,15 +23,6 @@ export default function TextForm(props) {
         let newText='';
         setText(newText);
     }
-    //Copy to Clipboard 
-    // const handleCopyText = (e) => {
-    //     setText(e.target.value);
-    //  } 
-    // const copyClick=()=>{
-    //     // console.log("Uppercase was clicked " + text)
-    //    copy(text)
-    //    alert(`You have copied "${text}"`);
-    // }
 
     const handleOnChange=(event)=>{
         // console.log("On Change")
