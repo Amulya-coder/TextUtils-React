@@ -41,15 +41,15 @@ function App() {
   const toggleMode=()=>{
     if(mode==='light'){
       setMode('dark')
-      document.body.style.backgroundColor='#0d1a44';
+      document.body.style.backgroundColor='rgb(16 45 84)';
       showAlert("Dark mode has been enabled", "success");
-      document.title='TextUtils - Dark Mode';
+      // document.title='TextUtils - Dark Mode';
     }
     else{
       setMode('light')
       document.body.style.backgroundColor='white';
       showAlert("Light mode has been enabled","success");
-      document.title='TextUtils - Light Mode';
+      // document.title='TextUtils - Light Mode';
     }
   }
 
@@ -64,17 +64,17 @@ function App() {
   <Switch>
         {/* /users --> component1
         /users/home --> component2 */}
-           <Route exact path="/about">
-            <About />
+            <Route exact path="/about">
+            <About mode={mode} />
           </Route>
-          <Route exact path="/">
-        <TextForm showAlert={showAlert} heading="Enter the text here" mode={mode}/> 
-          </Route>
+          <Route exact path="/"> 
+        <TextForm showAlert={showAlert} heading="Try TextUtils - Word Counter, Character Counter, Remove extra spaces " mode={mode}/> 
+           </Route> 
   </Switch>  
   </div>
-  </Router>
-  {/* <Navbar/> */}
-  {/* <Navbar title="TextUtils" about="About textUtils"/> */}
+  </Router> 
+   
+   {/* <Navbar title="TextUtils" about="About textUtils"/> */}
     </>
   );
 }
